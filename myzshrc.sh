@@ -5,6 +5,7 @@ alias ws="cd ~/source"
 alias wsh="cd ~/source/jh"
 alias wsc="cd ~/source/vcity"
 alias wjhs="cd ~/source/jh/1.0/erlang/im"
+alias w3d="cd /Users/Shared/Unity"
 
 # git 相关别名
 alias gts="git status"

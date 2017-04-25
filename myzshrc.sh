@@ -25,8 +25,6 @@ alias wsclient="cd /Users/zhuoyikang/source/jh/1.0/client"
 
 alias omnisharp_u3d="mono /Users/zhuoyikang/source/omnisharp-server/OmniSharp/bin/Debug/OmniSharp.exe -s /Applications/Unity/Unity.app/Contents/Frameworks/Managed"
 alias omnisharp="mono /Users/zhuoyikang/source/omnisharp-server/OmniSharp/bin/Debug/OmniSharp.exe"
-
-
 alias appconf="rm /Users/zhuoyikang/Library/Application\ Support/jhqc/VCity/ResData/Appconfig.txt"
 
 # erlang相关别名
@@ -36,13 +34,21 @@ alias develop_simple="erl -pa ~/source/distel/ebin/ ebin/ deps/*/ebin  -name dev
 alias kill_develop="ps -ef |grep develop@127.0.0.1 |grep beam | awk '{print $2}' | xargs kill"
 alias develop_jh="erl -pa ~/source/distel/ebin/ run_server/lib/ebin/ run_server/plugin/im/.ebin/ -name develop@127.0.0.1  -setcookie abc -detached"
 
-# 云主机
 ## ------- 各种环境变量
 
-# export LDFLAGS=-L/usr/local/opt/openssl/lib
-# export CPPFLAGS=-I/usr/local/opt/openssl/include
-
-# openssl路径，通过homebrew安装
-export KERL_CONFIGURE_OPTIONS=--with-ssl=/usr/local/opt/openssl --with-wx
-
 ## -------  启动设置
+
+## -------  golang
+
+export GOROOT=$HOME/source/go_install
+export GOPATH=$HOME/source/go
+export REDIS=~/source/redis/redis-3.2.8/src
+export PATH=$GOROOT/bin:$GOPATH/bin:$REDIS:$PATH
+export PATH=$PATH:~/source/bin:~/source/luacheck/install/bin
+
+## -------  etcd
+export ETCDCTL_API=3
+
+## -------  shutcut
+alias wso="cd ~/source/oops"
+alias wsm="cd ~/source/mass2"

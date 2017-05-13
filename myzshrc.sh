@@ -40,7 +40,7 @@ alias develop_jh="erl -pa ~/source/distel/ebin/ run_server/lib/ebin/ run_server/
 
 ## -------  golang
 
-export GOROOT=$HOME/source/go_install
+export GOROOT=/usr/local/go
 export GOPATH=$HOME/source/go
 export REDIS=~/source/redis/redis-3.2.8/src
 export PATH=$GOROOT/bin:$GOPATH/bin:$REDIS:$PATH
@@ -51,4 +51,5 @@ export ETCDCTL_API=3
 
 ## -------  shutcut
 alias wso="cd ~/source/oops"
+alias wsi="cd ~/source/go/src/github.com/indie21"
 alias wsm="cd ~/source/mass2"

@@ -36,6 +36,13 @@ alias develop_jh="erl -pa ~/source/distel/ebin/ run_server/lib/ebin/ run_server/
 
 ## ------- 各种环境变量
 
+##
+
+alias sdw="ssh ubuntu@139.199.225.85"
+alias sal="ssh root@119.23.79.186"
+alias smd="ssh ubuntu@120.77.254.116"
+alias sjira="ssh ubuntu@39.108.10.4"
+
 ## -------  启动设置
 
 ## -------  golang
@@ -50,6 +57,9 @@ export PATH=$PATH:~/source/bin:~/source/luacheck/install/bin
 export ETCDCTL_API=3
 
 ## -------  shutcut
-alias wso="cd ~/source/oops"
+alias wso="cd ~/source/go/src/oops"
 alias wsi="cd ~/source/go/src/github.com/indie21"
-alias wsm="cd ~/source/mass2"
+alias wsm="cd ~/source/mass"
+alias wsp="cd ~/source/go/src/github.com/indie21/PixarBattle"
+
+export IP=`ifconfig en0 | grep  "inet " | awk '{print $2}'`

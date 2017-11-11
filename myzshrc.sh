@@ -34,14 +34,31 @@ alias develop_simple="erl -pa ~/source/distel/ebin/ ebin/ deps/*/ebin  -name dev
 alias kill_develop="ps -ef |grep develop@127.0.0.1 |grep beam | awk '{print $2}' | xargs kill"
 alias develop_jh="erl -pa ~/source/distel/ebin/ run_server/lib/ebin/ run_server/plugin/im/.ebin/ -name develop@127.0.0.1  -setcookie abc -detached"
 
+alias lux="cd /Users/zhuoyikang/source/mass/trunk/data; python build.py ios development"
+alias luy="cd /Users/zhuoyikang/source/mass/trunk/data; python build.py ios demo"
+
+alias mm="make g;make"
+
 ## ------- 各种环境变量
 
 ##
 
-alias sdw="ssh ubuntu@139.199.225.85"
-alias sal="ssh root@119.23.79.186"
-alias smd="ssh ubuntu@120.77.254.116"
-alias sjira="ssh ubuntu@39.108.10.4"
+alias s_dw_x="ssh ubuntu@139.199.225.85"
+alias s_dw_y="ssh ubuntu@103.52.217.70"
+alias s_al_me="ssh root@119.23.79.186"
+
+alias s_lg_mass="ssh -p 2244 ubuntu@120.77.254.116"
+alias s_lg_jira="ssh -p 2244 ubuntu@39.108.10.4"
+
+alias s_lg_tx="ssh ubuntu@123.207.2.100"
+alias s_lg_dev="ssh dev@192.168.2.2"
+
+alias s_lg_gitlab="ssh ubuntu@139.199.15.14"
+alias s_lg_ci1="ssh ubuntu@119.29.251.168"
+alias s_lg_ci2="ssh ubuntu@118.89.59.231"
+alias s_lg_ci3_jira="ssh ubuntu@111.230.145.74"
+alias s_lg_ci4_dev="ssh ubuntu@111.230.145.221"
+
 
 ## -------  启动设置
 
@@ -56,6 +73,7 @@ export PATH=$PATH:~/source/bin:~/source/luacheck/install/bin
 ## -------  etcd
 export ETCDCTL_API=3
 
+
 ## -------  shutcut
 alias wso="cd ~/source/go/src/oops"
 alias wsi="cd ~/source/go/src/github.com/indie21"
@@ -63,3 +81,4 @@ alias wsm="cd ~/source/mass"
 alias wsp="cd ~/source/go/src/github.com/indie21/PixarBattle"
 
 export IP=`ifconfig en0 | grep  "inet " | awk '{print $2}'`
+export ETCD=$IP:2379
